@@ -1,0 +1,22 @@
+.wrapper {
+  width: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 5px;
+  margin: 2px;
+  transition: 0.2s ease-in-out;
+}
+.press {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+.success {
+  background: rgba(30, 255, 60, 0.1);
+}
+.failed {
+  background: rgba(255, 30, 30, 0.1);
+}

@@ -1,0 +1,102 @@
+.wrapper {
+  &.running {
+    & .lines__first {
+      left: 100%;
+      animation: startLoop 2.5s linear 0.1s 1,
+        runningLoop 5s linear 2.6s infinite;
+    }
+    & .lines__second {
+      animation: runningLoop 5s linear 0.1s infinite;
+    }
+    & .godzilla {
+      animation: walking 1s linear infinite;
+    }
+    & .player {
+      animation: walking 0.8s linear 0.2s reverse infinite;
+    }
+  }
+}
+.track {
+  width: 100%;
+  height: 40px;
+  background: #acacac;
+  border: 2px solid #888888;
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px 0px #00000080;
+  margin: 90px 0 30px;
+  position: relative;
+}
+.lines {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  & div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    & span {
+      width: 5%;
+      height: 2px;
+      border-radius: 4px;
+      background: #fff;
+    }
+  }
+  & .lines__first {
+    left: 0;
+  }
+  & .lines__second {
+    left: 100%;
+  }
+}
+.player,
+.godzilla {
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+.player {
+  width: 140px;
+  bottom: 0px;
+}
+.godzilla {
+  width: 100px;
+  left: 0;
+  bottom: 5%;
+}
+
+@keyframes startLoop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-205%);
+  }
+}
+@keyframes runningLoop {
+  0% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-205%);
+  }
+}
+@keyframes walking {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  33% {
+    transform: translateX(6px) rotate(2.4deg);
+  }
+  66% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
