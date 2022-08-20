@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/typing-trainer/static/css/main.7781a510.css",
+    "main.js": "/typing-trainer/static/js/main.4437e216.js",
+    "static/media/godzilla-img.png": "/typing-trainer/static/media/godzilla-img.e30503ffec61598e7b65.png",
+    "static/media/running-cat-img.png": "/typing-trainer/static/media/running-cat-img.29e1875cea99ba2c9d18.png",
+    "index.html": "/typing-trainer/index.html",
+    "main.7781a510.css.map": "/typing-trainer/static/css/main.7781a510.css.map",
+    "main.4437e216.js.map": "/typing-trainer/static/js/main.4437e216.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7781a510.css",
+    "static/js/main.4437e216.js"
+  ]
+}
