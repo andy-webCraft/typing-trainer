@@ -26,8 +26,8 @@ const appSlice = createSlice({
       state.inProgress = action.payload;
     },
     getMaxScore(state) {
-      const userMaxScore = JSON.parse(localStorage.getItem("maxScore") || "");
-      if (userMaxScore) state.maxScore = userMaxScore;
+      const userMaxScore = localStorage.getItem("maxScore");
+      if (userMaxScore) state.maxScore = JSON.parse(userMaxScore);
     },
     setMaxScore(state, action: PayloadAction<number>) {
       state.maxScore[state.options.mode] = action.payload;
